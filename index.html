@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#000000">
+    <link rel="manifest" href="./manifest.json">
+
+    <title>Captcha solver</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+  </head>
+  <body>
+
+    <h1>IITG Login Page</h1>
+    <div>
+      <div id="captchaBox">
+        <form onsubmit="signin(event)">
+          <div id="form">
+            <img src="iitglogo.png" alt="iit logo"/>
+            <h2>IIT Guwahati</h2>
+            <input type="text" name="rough" style="display:none;"/>
+            <input type="text" name="name" placeholder="username" autocomplete="chrome-off" required/>
+            <input type="password" name="pwd" placeholder="password" autocomplete="chrome-off" required/>
+            <!-- <button >Sign in</button> -->
+            <div style="position: relative">
+              <span></span>
+              <div id="refresh" onclick="generateCaptcha()"></div>
+              <div id="controls">
+                <button id="recordButton">Speak now</button>
+              </div>
+            </div>
+            <div id="formats">Format: start recording to see sample rate</div>
+            <div id="audio">
+              <p><strong>Recordings:</strong></p>
+              <ol id="recordingsList"></ol>
+            </div>
+            <div id="recognizedDigit">
+              <span>
+              </span>
+            </div>
+          </div>
+          <div id="captcha">
+            <!-- <span></span>
+            <div id="controls">
+              <button id="recordButton">Speak now</button>
+            </div>
+            <div id="formats">Format: start recording to see sample rate</div>
+            <div id="audio">
+              <p><strong>Recordings:</strong></p>
+              <ol id="recordingsList"></ol>
+            </div>
+            <div id="recognizedDigit">
+              <span>
+              </span>
+            </div> -->
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="content">
+      <button onclick="logout()">back</button>
+      <h1>Welcome</h1>
+      <span>
+        <textarea onkeyup="update(event)" id="text"></textarea>
+      </span>
+    </div>
+    <pre id="list"></pre>
+    <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyCmii1-wmb6kIz2MfPmaMbRIVSzRIF1K_8",
+        authDomain: "speech-math-captcha-solver.firebaseapp.com",
+        projectId: "speech-math-captcha-solver",
+        storageBucket: "speech-math-captcha-solver.appspot.com",
+        messagingSenderId: "446822410270",
+        appId: "1:446822410270:web:494ea15d6f03fe1aff660f"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+    </script>
+  	<!-- <script src="firebase.js"></script> -->
+  	<script src="serviceWorkerSCS.js"></script>
+  	<script src="activateSW.js"></script>
+  	<script src="js/codebookModel.js"></script>
+  	<script src="js/data.js"></script>
+  	<script src="js/captchaLogic.js"></script>
+  	<script src="js/recognize.js"></script>
+  	<script src="js/recorder.js"></script>
+  	<script src="js/app.js"></script>
+  </body>
+</html>
