@@ -22,5 +22,5 @@
     ],
     "name": "Speech Math Captcha solver",
     "short_name": "IITG",
-    "start_url": "/speech-math-captcha-solver/index.html"
+    "start_url": "/speech-based-mathematical-captcha-solver/index.html"
 }
