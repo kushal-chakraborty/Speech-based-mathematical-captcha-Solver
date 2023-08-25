@@ -1,8 +1,8 @@
 const registerServiceWorker = async () => {
     if ("serviceWorker" in navigator) {
       try {
-        const registration = await navigator.serviceWorker.register("/speech-based-mathematical-captcha-solver/serviceWorkerSCS.js", {
-          scope: "/speech-based-mathematical-captcha-solver/",
+        const registration = await navigator.serviceWorker.register("/Speech_Based_Mathematical_Captcha_Solver_Android_Application/serviceWorkerSCS.js", {
+          scope: "/Speech_Based_Mathematical_Captcha_Solver_Android_Application/",
         });
         if (registration.installing) {
           console.log("Service worker installing");
