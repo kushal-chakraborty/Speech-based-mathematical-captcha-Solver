@@ -2,8 +2,8 @@ var APP_PREFIX = 'Speech Math Captcha Solver'     // Identifier for this app (th
 var VERSION = 'version_01'              // Version of the off-line cache (change this value everytime you want to update cache)
 var CACHE_NAME = APP_PREFIX + VERSION
 var URLS = [                            // Add URL you want to cache in this list.
-  '/speech-based-mathematical-captcha-solver/',                     // If you have separate JS/CSS files,
-  '/speech-based-mathematical-captcha-solver/index.html'            // add path to those files here
+  '/Speech_Based_Mathematical_Captcha_Solver_Android_Application/',                     // If you have separate JS/CSS files,
+  '/Speech_Based_Mathematical_Captcha_Solver_Android_Application/index.html'            // add path to those files here
 ]
 
 // Respond with cached resources
